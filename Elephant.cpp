@@ -8,7 +8,7 @@ void solve()
 
     result = (n / 5);
 
-    if (result > 1)
+    if (result > n % 5 == 0)
     {
         result++;
     }
