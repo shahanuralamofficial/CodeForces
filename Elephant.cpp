@@ -3,12 +3,12 @@ using namespace std;
 
 void solve()
 {
-    int n, result = 0;
+    long  int n, result = 0;
     cin >> n;
 
     result = (n / 5);
 
-    if (result > n % 5 == 0)
+    if (n % 5!= 0)
     {
         result++;
     }
