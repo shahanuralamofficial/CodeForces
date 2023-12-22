@@ -7,12 +7,10 @@ void result()
 {
     string players;
     cin >> players;
-    int len = players.length();
     int zero = 0, one = 0;
-
-    for (size_t i = 0; i < len; i++)
+    for (int i = 0; i < players.size(); i++)
     {
-        if (players[i] = '0')
+        if (players[i] == '0')
         {
             zero = zero + 1;
             one = 0;
@@ -22,17 +20,14 @@ void result()
             one = one + 1;
             zero = 0;
         }
+        if (zero >= 7 || one >= 7)
+        {
+            cout << "YES\n";
+            return;
+        }
     }
-     cout<<one <<"\n"<<zero<<"\n";
 
-    if (zero >= 7 || one >= 7)
-    {
-        cout << "YES\n";
-    }
-    else
-    {
-        cout << "NO\n";
-    }
+    cout << "NO\n";
 }
 
 int main()
